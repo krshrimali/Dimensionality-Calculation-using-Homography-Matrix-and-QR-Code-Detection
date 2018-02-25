@@ -7,6 +7,13 @@ Book Dimension Approximation
 Approximate the height and width of the book, using Homography, Feature Detection and zbar
 for QR detection. Tracker used from plane_tracker.py in opencv modules.
 
+Instructions
+===================
+
+1) Select the book cover having all the four corners.
+2) Select the text, to be used for finding ratio. [Here the text will be QR code later]
+[Note: Here, text has to be "AMBIGUITIES", if not then update the actual lengths in main method.]
+
 Usage
 -----
 book_length_detection.py [<image source>]
@@ -14,6 +21,7 @@ book_length_detection.py [<image source>]
 Select a plane representing book's corners, QR code scanners. Homography Feature Detection done,
 if QR code in the book. Ratio used to calculate the height and width of the book.
 '''
+
 
 # Python 2/3 compatibility
 from __future__ import print_function

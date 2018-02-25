@@ -7,6 +7,16 @@ Book Dimension Approximation
 Approximate the height and width of the book, using Homography, Feature Detection and zbar
 for QR detection. Tracker used from plane_tracker.py in opencv modules.
 
+Instructions
+===================
+
+1) (For top edge) Select a small rectangle, starting point being the (initial) edge point and ending to the
+end point of the edge. [This is used to find the edge length]
+2) Repeat step 1 for bottom edge.
+3) Select the text, to be used for Step 1. [Here the text will be QR code later]
+4) Repeat step 3, as it is.
+[Note: Here, text has to be "AMBIGUITIES", if not then update the actual lengths in main method.]
+
 Usage
 -----
 book_length_detection.py [<image source>]
