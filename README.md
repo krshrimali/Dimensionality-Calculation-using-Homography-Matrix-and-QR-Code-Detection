@@ -50,6 +50,6 @@ Install numpy either using pip or build from source. `pip install numpy` [or `pi
 
 You need to install OpenCV2 then. `pip install opencv-python` should do, or follow searches from google for more information.
 
-** Note: No function ORB\_create() [most probably when you are using python-3 version], if this error comes - then replace `ORB_create(nfeatures = 1000)` with `ORB(nfeatures = 1000)` in `plane_tracker.py` file. **
+Note: No function ORB\_create() [most probably when you are using python-3 version], if this error comes - then replace `ORB_create(nfeatures = 1000)` with `ORB(nfeatures = 1000)` in `plane_tracker.py` file.
 --------------------------------------------------------------------------------
 Inspiration Credits: learnopencv.com latest blog post on QR Code Detection.
