@@ -26,5 +26,30 @@ instead of QR code because of some unavailability of the printing facilities. Th
 
 3) Can we measure the number of books in the stack based on the photo angle?
 
+## Debugging 
+
+In case of errors, import exceptions for following libraries:
+
+1) video : No module named "video"
+
+Copy and paste video.py from https://github.com/opencv/opencv/blob/master/samples/python/video.py to the current directory.
+
+2) plane\_tracker: No module named 'plane\_tracker'
+
+Copy and paste plane\_tracker.py from https://github.com/opencv/opencv/blob/master/samples/python/plane\_tracker.py to the current directory.
+
+3) common : No module named 'common' 
+
+Copy and paste common.py from https://github.com/opencv/opencv/blob/master/samples/python/common.py to the current directory.
+
+4) numpy : No module named 'numpy'
+
+Install numpy either using pip or build from source. `pip install numpy` [or `pip3` based on the pip and python versions] should do, if not, please follow the searches on google.
+
+5) cv2 : No module named 'cv2'
+
+You need to install OpenCV2 then. `pip install opencv-python` should do, or follow searches from google for more information.
+
+** Note: No function ORB\_create() [most probably when you are using python-3 version], if this error comes - then replace `ORB_create(nfeatures = 1000)` with `ORB(nfeatures = 1000)` in `plane_tracker.py` file. **
 --------------------------------------------------------------------------------
 Inspiration Credits: learnopencv.com latest blog post on QR Code Detection.
