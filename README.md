@@ -32,15 +32,15 @@ In case of errors, import exceptions for following libraries:
 
 1) video : No module named "video"
 
-Copy and paste video.py from https://github.com/opencv/opencv/blob/master/samples/python/video.py to the current directory.
+Copy and paste video.py from [Video Module: OpenCV](https://github.com/opencv/opencv/blob/master/samples/python/video.py) to the current directory.
 
 2) plane\_tracker: No module named 'plane\_tracker'
 
-Copy and paste plane\_tracker.py from https://github.com/opencv/opencv/blob/master/samples/python/plane\_tracker.py to the current directory.
+Copy and paste plane\_tracker.py from [Plane Tracker: OpenCV](https://github.com/opencv/opencv/blob/master/samples/python/plane_tracker.py) to the current directory.
 
 3) common : No module named 'common' 
 
-Copy and paste common.py from https://github.com/opencv/opencv/blob/master/samples/python/common.py to the current directory.
+Copy and paste common.py from [Common Module: OpenCV](https://github.com/opencv/opencv/blob/master/samples/python/common.py) to the current directory.
 
 4) numpy : No module named 'numpy'
 
