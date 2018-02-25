@@ -11,9 +11,6 @@ Usage
 -----
 book_length_detection.py [<image source>]
 
-Keys:
-   ESC - Quit
-
 Select a plane representing book's corners, QR code scanners. Homography Feature Detection done,
 if QR code in the book. Ratio used to calculate the height and width of the book.
 '''
