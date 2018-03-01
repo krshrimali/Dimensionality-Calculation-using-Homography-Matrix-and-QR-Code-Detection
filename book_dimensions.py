@@ -30,7 +30,6 @@ if QR code in the book. Ratio used to calculate the height and width of the book
 '''
 # Python 2/3 compatibility
 from __future__ import print_function
-import cv2
 import argparse
 import sys
 import cv2 as cv
@@ -79,14 +78,14 @@ if __name__ == '__main__':
 
     clone = cv.resize(image, (0,0), fx=0.125, fy=0.125) # resizing, reducing higher resolution
 
-    cv2.namedWindow("image")
+    cv.namedWindow("image")
     # set mouse call back event for left button double click
-    cv2.setMouseCallback("image", click_and_select)
+    cv.setMouseCallback("image", click_and_select)
 
     while True:
-        cv2.imshow("image", clone)
+        cv.imshow("image", clone)
         # record the key pressed
-        key = cv2.waitKey(1) & 0xFF
+        key = cv.waitKey(1) & 0xFF
 
         # exit if key 'c' is pressed
         if key == ord('c'):
@@ -97,7 +96,7 @@ if __name__ == '__main__':
             else:
                 break
 
-    cv2.destroyAllWindows()
+    cv.destroyAllWindows()
 
     # calculate edge lengths based on recorded points
     Dimensions_width_top = distance(refPt[0][0], refPt[0][1], refPt[1][0], refPt[1][1])
