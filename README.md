@@ -1,6 +1,16 @@
 # Measurement-of-Book-Cover
 OpenCV based dimensional measurement of a book cover using Homography and Ratio comparison.
 
+## Files Description 
+
+1) `book_dimensions.py` : Simpler, easy and gives lengths of all edges.
+2) `book_dimension_detection.py` : Complex and gives only width and height of the book.
+3) `book_dimension_top_bottom_edge.py` : Complex, gives length of top and bottom edge of the book (only width)
+
+Folder: `images/` : All output and input images are in this folder. Use `book_final.jpg` as sample image. 
+
+Documentation of each file is in the code itself.
+
 ## What it does?
 Approximation of the dimensions of a cover page of a book using techniques: Homography Algorithms, [QR Code Detection using Zbar]
 
