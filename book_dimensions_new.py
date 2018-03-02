@@ -81,11 +81,16 @@ if __name__ == '__main__':
                         ], dtype=float
                        )
 
-    # cv.namedWindow("image")
     cv2.imshow("Image", clone)
 
-    # set mouse call back event for left button double click
+    # get points of the corner of the books
+    print('Select points of the corner of the books. (top left to bottom right). Once done, press any key')
     points = get_four_points(clone)
+
+    if(len(points) != 4):
+        print("You are required to enter only 4 points.")
+        print("Quitting.")
+        sys.exit()
 
     # Calculation of Homography matrix
     h, status = cv2.findHomography(points, refPt_dst)
@@ -96,14 +101,17 @@ if __name__ == '__main__':
     # Save the corrected image for future reference
     cv2.imwrite("images/book_perspective.jpg", img_dest)
 
-    # # get book corners
-    # refPt = get_four_points(img_dest)
-
+    # set corner of the books to the corner of the image
     refPt = [[0, 0], [img_dest.shape[1], 0], [img_dest.shape[1], img_dest.shape[0]], [0, img_dest.shape[0]]]
     # refPt = get_four_points(img_dest) # book corners selected earlier
     # get reference image corners
+    print('Select corners of the reference image. (top left to bottom left). Once done, press any key')
     refPt_reference = get_four_points(img_dest)
 
+    if(len(refPt_reference) != 4):
+        print("You are required to enter only 4 points.")
+        print("Quitting.")
+        sys.exit()
     # print(refPt)
     # calculate edge lengths based on recorded points
     Dimensions_width_top = distance(refPt[0], refPt[1])
